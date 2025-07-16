@@ -50,7 +50,7 @@ module.exports = {
   links: [
     {
       name: 'GitHub',
-      link: 'https://github.com/chemchetchegio',
+      link: 'https://github.com/chemchetchagio',
     },
     {
       name: 'Telegram',
