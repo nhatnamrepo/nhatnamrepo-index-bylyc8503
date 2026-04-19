@@ -58,8 +58,7 @@ export default function CustomEmbedLinkMenu({
             leaveTo="opacity-0"
           >
             <DialogBackdrop 
-              className="fixed inset-0 backdrop-blur-lg bg-black/15" 
-              {/* this is example of dark blur*/}
+              className="fixed inset-0 backdrop-blur-md bg-black/10" 
               onClick={closeMenu}
             />
             {/* ts overrated imo, no im overrated just delete color */}
