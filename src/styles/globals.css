@@ -48,3 +48,8 @@ body.blur-backdrop > #__next {
   backdrop-filter: brightness(0.7);
 
 }
+
+#headlessui-portal-root [role="dialog"] {
+  display: flex;
+  justify-content: center;
+}
