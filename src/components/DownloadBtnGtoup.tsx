@@ -71,7 +71,7 @@ const DownloadButtonGroup = () => {
   return (
     <>
       <CustomEmbedLinkMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} path={asPath} />
-      <div className="flex flex-wrap justify-center gap-2">
+      <div className={`flex flex-wrap justify-center gap-2 transition-all duration-100 ${menuOpen ? 'blur-sm' : ''}`}> {/* The greatest way to enable bg blur, next in _app.tsx */}
         <DownloadButton
           onClickCallback={() => window.open(`/api/raw?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`)}
           btnColor="blue"

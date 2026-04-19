@@ -1,4 +1,4 @@
-import { Dispatch, Fragment, SetStateAction, useRef, useState } from 'react'
+import { Dispatch, Fragment, SetStateAction, useRef, useState, useEffect } from 'react'
 import { Dialog, DialogBackdrop, Transition } from '@headlessui/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useClipboard } from 'use-clipboard-copy'
@@ -43,6 +43,14 @@ export default function CustomEmbedLinkMenu({
   const readablePath = getReadablePath(path)
   const filename = readablePath.substring(readablePath.lastIndexOf('/') + 1)
   const [name, setName] = useState(filename)
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.classList.add('blur-backdrop')
+    } else {
+      document.body.classList.remove('blur-backdrop')
+    }
+    return () => document.body.classList.remove('blur-backdrop')
+  }, [menuOpen])
 
   return (
     <Transition appear show={menuOpen} as={Fragment}>
@@ -58,7 +66,7 @@ export default function CustomEmbedLinkMenu({
             leaveTo="opacity-0"
           >
             <DialogBackdrop 
-              className="fixed inset-0 backdrop-blur-md bg-black/10" 
+              className="fixed inset-0" 
               onClick={closeMenu}
             />
             {/* ts overrated imo, no im overrated just delete color */}
