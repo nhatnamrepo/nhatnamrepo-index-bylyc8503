@@ -160,7 +160,7 @@ return (
     <div className="flex min-h-full items-start justify-center p-4 pt-12">
       <Transition.Child
         as="div"
-        className="pointer-events-auto w-full max-w-3xl"
+        className="pointer-events-auto mx-auto max-w-3xl w-[calc(100%-2rem)]"
         enter="ease-out duration-100"
         enterFrom="opacity-0 scale-95"
         enterTo="opacity-100 scale-100"
