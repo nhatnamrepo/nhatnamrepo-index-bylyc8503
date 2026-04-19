@@ -156,23 +156,19 @@ return (
   <Transition appear show={searchOpen} as={Fragment}>
     <Dialog as="div" className="fixed inset-0 z-[200]" onClose={closeSearchBox}>
   <div className="fixed inset-0" onClick={closeSearchBox} />
-  <div className="fixed inset-0 flex items-start justify-center px-4 pt-12 pointer-events-none">
-    <Transition.Child
-      as="div"
-      className="pointer-events-auto w-full max-w-3xl overflow-hidden rounded border border-gray-300/30 text-left shadow-xl backdrop-blur-lg"
-      style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)' }}
-      enter="ease-out duration-100"
-      enterFrom="opacity-0 scale-95"
-      enterTo="opacity-100 scale-100"
-      leave="ease-in duration-100"
-      leaveFrom="opacity-100 scale-100"
-      leaveTo="opacity-0 scale-95"
-    >
-      <div 
-        className="pointer-events-auto w-full max-w-3xl overflow-hidden rounded border border-gray-300/30 text-left shadow-xl backdrop-blur-lg"
-        style={{ marginLeft: 'auto', marginRight: 'auto' }}
-      >
-              <Dialog.Title
+ <div className="fixed inset-0 flex items-start justify-center px-4 pt-12 pointer-events-none">
+  <Transition.Child
+    as="div"
+    className="pointer-events-auto w-full max-w-3xl"
+    enter="ease-out duration-100"
+    enterFrom="opacity-0 scale-95"
+    enterTo="opacity-100 scale-100"
+    leave="ease-in duration-100"
+    leaveFrom="opacity-100 scale-100"
+    leaveTo="opacity-0 scale-95"
+  >
+    <div className="overflow-hidden rounded border border-gray-300/30 text-left shadow-xl backdrop-blur-lg">
+      <Dialog.Title
                 as="h3"
                 className="flex items-center space-x-4 border-b border-gray-400/30 bg-black/60 p-4 text-white"
               >
