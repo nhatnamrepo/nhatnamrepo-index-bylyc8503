@@ -156,7 +156,7 @@ export default function SearchModal({
     <Transition appear show={searchOpen} as={Fragment}>
       <Dialog as="div" className="fixed inset-0 z-[200] overflow-y-auto" onClose={closeSearchBox}>
         <div className="fixed inset-0" onClick={closeSearchBox} />
-        <div className="min-h-screen px-4 text-center">
+        <div className="min-h-screen px-4 flex justify-center" /> {/* make it center */}
 
           <Transition.Child
             as={Fragment}
@@ -167,7 +167,7 @@ export default function SearchModal({
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <div className="my-12 inline-block w-full max-w-3xl transform overflow-hidden rounded border border-gray-300/30 text-left shadow-xl transition-all backdrop-blur-lg">
+            <div className="my-12  w-full max-w-3xl transform overflow-hidden rounded border border-gray-300/30 text-left shadow-xl transition-all backdrop-blur-lg">
               <Dialog.Title
                 as="h3"
                 className="flex items-center space-x-4 border-b border-gray-400/30 bg-black/60 p-4 text-white"
