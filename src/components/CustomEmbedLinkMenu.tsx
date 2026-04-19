@@ -57,7 +57,8 @@ export default function CustomEmbedLinkMenu({
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <DialogBackdrop className="fixed inset-0 bg-white/60 dark:bg-gray-800/60" />
+            {/* <DialogBackdrop className="fixed inset-0 bg-white/60 dark:bg-gray-800/60" /> */}
+            {/* ts overrated imo */}
           </Transition.Child>
 
           {/* This element is to trick the browser into centering the modal contents. */}
