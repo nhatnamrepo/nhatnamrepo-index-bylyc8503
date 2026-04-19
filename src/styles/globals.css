@@ -43,6 +43,7 @@ code[class*='language-'] {
 /* Very Blur*/
 
 body.blur-backdrop > #__next {
-  filter: blur(4px);
-  transition: filter 0.4s ease;
+  backdrop-filter: blur(8px);     
+  backdrop-filter: brightness(0.7);
+
 }
