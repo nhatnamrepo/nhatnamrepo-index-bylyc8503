@@ -57,7 +57,10 @@ export default function CustomEmbedLinkMenu({
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <DialogBackdrop className="fixed inset-0" />
+            <DialogBackdrop 
+              className="fixed inset-0"
+              onClick={closeMenu}
+            />
             {/* ts overrated imo, no im overrated just delete color */}
           </Transition.Child>
 
