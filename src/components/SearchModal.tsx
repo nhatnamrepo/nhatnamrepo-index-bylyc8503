@@ -156,18 +156,18 @@ return (
   <Transition appear show={searchOpen} as={Fragment}>
     <Dialog as="div" className="fixed inset-0 z-[200]" onClose={closeSearchBox}>
   <div className="fixed inset-0" onClick={closeSearchBox} />
-<div className="fixed inset-0 overflow-y-auto pointer-events-none">
-  <div className="flex min-h-full items-start justify-center p-4 pt-12">
-    <Transition.Child
-      as="div"
-      className="pointer-events-auto w-full max-w-3xl"
-      enter="ease-out duration-100"
-      enterFrom="opacity-0 scale-95"
-      enterTo="opacity-100 scale-100"
-      leave="ease-in duration-100"
-      leaveFrom="opacity-100 scale-100"
-      leaveTo="opacity-0 scale-95"
-    >
+    <div className="fixed inset-0 overflow-y-auto pointer-events-none">
+    <div className="flex min-h-full items-start justify-center p-4 pt-12">
+      <Transition.Child
+        as="div"
+        className="pointer-events-auto w-full max-w-3xl"
+        enter="ease-out duration-100"
+        enterFrom="opacity-0 scale-95"
+        enterTo="opacity-100 scale-100"
+        leave="ease-in duration-100"
+        leaveFrom="opacity-100 scale-100"
+        leaveTo="opacity-0 scale-95"
+      >
       <div className="overflow-hidden rounded border border-gray-300/30 text-left shadow-xl backdrop-blur-lg">
       <Dialog.Title
                 as="h3"
@@ -206,9 +206,10 @@ return (
                     )}
                   </>
                 )}
+                </div>
               </div>
-            </div>
-          </Transition.Child>
+            </Transition.Child>
+          </div>
         </div>
       </Dialog>
     </Transition>
