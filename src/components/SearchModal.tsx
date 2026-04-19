@@ -161,7 +161,6 @@ return (
       as="div"
       className="pointer-events-auto w-full max-w-3xl overflow-hidden rounded border border-gray-300/30 text-left shadow-xl backdrop-blur-lg"
       style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)' }}
-      {/*FORCE IT, DO IT, PUSH IT, EAT ME */}
       enter="ease-out duration-100"
       enterFrom="opacity-0 scale-95"
       enterTo="opacity-100 scale-100"
