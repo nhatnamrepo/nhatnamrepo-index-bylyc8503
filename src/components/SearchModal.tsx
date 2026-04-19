@@ -154,7 +154,8 @@ export default function SearchModal({
 
   return (
     <Transition appear show={searchOpen} as={Fragment}>
-      <Dialog as="div" className="fixed inset-0 z-[200] overflow-y-auto" onClose={closeSearchBox}>
+      {/*overflow-y-auto ahhh moment*/}
+      <Dialog as="div" className="fixed inset-0 z-[200]" onClose={closeSearchBox}>
         <div className="fixed inset-0" onClick={closeSearchBox} />
         <div className="fixed inset-0 flex items-start justify-center px-4 pt-12">
 
