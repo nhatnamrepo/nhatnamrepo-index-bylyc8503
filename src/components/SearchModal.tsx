@@ -221,8 +221,6 @@ return (
               </div>
             </Transition.Child>
           </div>
-        </div>
-      </div>
       </Dialog>
     </Transition>
   )
