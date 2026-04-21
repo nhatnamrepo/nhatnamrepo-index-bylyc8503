@@ -1,7 +1,7 @@
 import type { ReactElement, ReactNode } from 'react'
 
 export function PreviewContainer({ children }: { children: ReactNode }): ReactElement {
-  return <div className="rounded bg-white p-3 shadow-sm dark:bg-gray-900 dark:text-white">{children}</div>
+  return <div className="rounded bg-white/50 p-3 shadow-sm backdrop-blur-lg dark:bg-gray-800/50 dark:text-white">{children}</div>
 }
 
 export function DownloadBtnContainer({ children }: { children: ReactNode }): ReactElement {

@@ -59,15 +59,17 @@ const Navbar = () => {
 
       <SearchModal searchOpen={searchOpen} setSearchOpen={setSearchOpen} />
 
-      <div className="mx-auto flex w-full items-center justify-between space-x-4 px-4 py-1">
-        <Link href="/" passHref className="flex items-center space-x-2 py-2 hover:opacity-80 dark:text-white md:p-2">
-          <Image src={siteConfig.icon} alt="icon" width="25" height="25" priority />
-          <span className="hidden font-bold sm:block">{siteConfig.title}</span>
-        </Link>
+      <div className="mx-auto flex w-full items-center justify-between px-4 py-1">
+        <div className="flex flex-1 items-center justify-start">
+          <Link href="/" passHref className="flex items-center space-x-2 py-2 hover:opacity-80 dark:text-white md:p-2">
+            <Image src={siteConfig.icon} alt="icon" width="25" height="25" priority />
+            <span className="hidden font-bold sm:block">{siteConfig.title}</span>
+          </Link>
+        </div>
 
-        <div className="flex flex-1 items-center space-x-4 text-gray-700 md:flex-initial">
+        <div className="flex flex-1 items-center justify-center">
           <button
-            className="flex flex-1 items-center justify-between rounded-lg bg-gray-100 px-2.5 py-1.5 hover:opacity-80 dark:bg-gray-800 dark:text-white md:w-48"
+            className="flex w-full max-w-sm items-center justify-between rounded-lg bg-gray-100 px-2.5 py-1.5 hover:opacity-80 dark:bg-gray-800 dark:text-white"
             onClick={openSearchBox}
           >
             <div className="flex items-center space-x-2">
@@ -82,7 +84,9 @@ const Navbar = () => {
               <div className="rounded-lg bg-gray-200 px-2 py-1 text-xs font-medium dark:bg-gray-700">K</div>
             </div>
           </button>
+        </div>
 
+        <div className="flex flex-1 items-center justify-end space-x-4 text-gray-700">
           {siteConfig.links.length !== 0 &&
             siteConfig.links.map((l: { name: string; link: string }) => (
               <a
