@@ -54,7 +54,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className="sticky top-0 z-[100] border-b border-gray-900/10 bg-white/80 backdrop-blur-lg dark:border-gray-600/30 dark:bg-gray-900/70">
+    <div className="sticky top-0 z-[100] border-b border-gray-900/10 bg-white/80 backdrop-blur-lg dark:border-gray-600/30 dark:bg-gray-500/70">
       <Toaster />
 
       <SearchModal searchOpen={searchOpen} setSearchOpen={setSearchOpen} />
