@@ -74,7 +74,7 @@ const FolderGridLayout = ({
   const getItemPath = (name: string) => `${path === '/' ? '' : path}/${encodeURIComponent(name)}`
 
   return (
-    <div className="rounded bg-white/50 shadow-sm backdrop-blur-md dark:bg-gray-900/50 dark:text-gray-100">
+    <div className="rounded bg-white/50 shadow-sm backdrop-blur-lg dark:bg-gray-900/50 dark:text-gray-100">
       <div className="flex items-center border-b border-gray-900/10 px-3 text-xs font-bold uppercase tracking-widest text-gray-600 dark:border-gray-500/30 dark:text-gray-400">
         <div className="flex-1">{`${folderChildren.length} item(s)`}</div>
         <div className="flex p-1.5 text-gray-700 dark:text-gray-400">
@@ -148,8 +148,7 @@ const FolderGridLayout = ({
                     className="cursor-pointer rounded px-1.5 py-1 hover:bg-gray-300 dark:hover:bg-gray-600"
                     onClick={() => {
                       clipboard.copy(
-                        `${getBaseUrl()}/api/raw?path=${getItemPath(c.name)}${
-                          hashedToken ? `&odpt=${hashedToken}` : ''
+                        `${getBaseUrl()}/api/raw?path=${getItemPath(c.name)}${hashedToken ? `&odpt=${hashedToken}` : ''
                         }`
                       )
                       toast.success('Copied raw file permalink.')
@@ -160,9 +159,8 @@ const FolderGridLayout = ({
                   <a
                     title={'Download file'}
                     className="cursor-pointer rounded px-1.5 py-1 hover:bg-gray-300 dark:hover:bg-gray-600"
-                    href={`${getBaseUrl()}/api/raw?path=${getItemPath(c.name)}${
-                      hashedToken ? `&odpt=${hashedToken}` : ''
-                    }`}
+                    href={`${getBaseUrl()}/api/raw?path=${getItemPath(c.name)}${hashedToken ? `&odpt=${hashedToken}` : ''
+                      }`}
                   >
                     <FontAwesomeIcon icon={['far', 'arrow-alt-circle-down']} />
                   </a>
@@ -171,9 +169,8 @@ const FolderGridLayout = ({
             </div>
 
             <div
-              className={`${
-                selected[c.id] ? 'opacity-100' : 'opacity-0'
-              } absolute left-0 top-0 z-10 m-1 rounded bg-white/50 py-0.5 group-hover:opacity-100 dark:bg-gray-900/50`}
+              className={`${selected[c.id] ? 'opacity-100' : 'opacity-0'
+                } absolute left-0 top-0 z-10 m-1 rounded bg-white/50 py-0.5 group-hover:opacity-100 dark:bg-gray-900/50`}
             >
               {!c.folder && !(c.name === '.password') && (
                 <Checkbox

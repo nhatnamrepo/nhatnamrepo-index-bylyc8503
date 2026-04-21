@@ -337,15 +337,14 @@ const FileListing: FC<{ query?: ParsedUrlQuery }> = ({ query }) => {
         {layout.name === 'Grid' ? <FolderGridLayout {...folderProps} /> : <FolderListLayout {...folderProps} />}
 
         {!onlyOnePage && (
-          <div className="rounded-b bg-white/50 backdrop-blur-md dark:bg-gray-900/50 dark:text-gray-100">
+          <div className="rounded-b bg-white/50 backdrop-blur-lg dark:bg-gray-900/50 dark:text-gray-100">
             <div className="border-b border-gray-200 p-3 text-center font-mono text-sm text-gray-400 dark:border-gray-700">
               {`- showing ${size} page(s) ` +
                 (isLoadingMore ? `of ... file(s) -` : `of ${folderChildren.length} file(s) -`)}
             </div>
             <button
-              className={`flex w-full items-center justify-center space-x-2 p-3 disabled:cursor-not-allowed ${
-                isLoadingMore || isReachingEnd ? 'opacity-60' : 'hover:bg-gray-100 dark:hover:bg-gray-850'
-              }`}
+              className={`flex w-full items-center justify-center space-x-2 p-3 disabled:cursor-not-allowed ${isLoadingMore || isReachingEnd ? 'opacity-60' : 'hover:bg-gray-100 dark:hover:bg-gray-850'
+                }`}
               onClick={() => setSize(size + 1)}
               disabled={isLoadingMore || isReachingEnd}
             >
