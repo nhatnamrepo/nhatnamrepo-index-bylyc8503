@@ -69,7 +69,7 @@ const Navbar = () => {
 
         <div className="flex flex-1 items-center justify-center">
           <button
-            className="flex w-full max-w-sm items-center justify-between rounded-lg bg-white/20 px-2.5 py-1.5 text-white hover:opacity-80 backdrop-blur-sm dark:bg-gray-800"
+            className="glow-rotate flex w-full max-w-sm items-center justify-between rounded-lg bg-white/20 px-2.5 py-1.5 text-white hover:opacity-80 backdrop-blur-sm shadow-[0_0_15px_rgba(255,255,255,0.3)] hover:shadow-[0_0_25px_rgba(255,255,255,0.5)] transition-shadow duration-300 dark:bg-gray-800 dark:shadow-[0_0_15px_rgba(255,255,255,0.15)]"
             onClick={openSearchBox}
           >
             <div className="flex items-center space-x-2">
