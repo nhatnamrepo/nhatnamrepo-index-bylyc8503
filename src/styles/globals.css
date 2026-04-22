@@ -66,51 +66,44 @@ body.blur-backdrop>#__next {
   justify-content: center;
 }
 
-/* Rotating glow border animation */
+/* Rotating glow border animation — uses @property to animate gradient angle */
+@property --glow-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
 .glow-rotate {
   position: relative;
-  overflow: hidden;
 }
 
 .glow-rotate::before {
   content: '';
   position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: conic-gradient(from 0deg,
-      transparent 0deg,
-      transparent 60deg,
-      rgba(255, 255, 255, 0.5) 120deg,
-      transparent 180deg,
-      transparent 240deg,
-      rgba(255, 255, 255, 0.3) 300deg,
-      transparent 360deg);
-  animation: glow-spin 2s linear infinite;
-  z-index: 0;
-}
-
-.glow-rotate::after {
-  content: '';
-  position: absolute;
-  inset: 2.5px;
+  inset: -8px;
   border-radius: inherit;
-  background: inherit;
-  z-index: 1;
+  background: conic-gradient(
+    from var(--glow-angle),
+    transparent 0%,
+    rgba(255, 255, 255, 0.8) 8%,
+    transparent 16%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.5) 58%,
+    transparent 66%
+  );
+  filter: blur(12px);
+  animation: glow-spin 3s linear infinite;
+  z-index: -1;
+  pointer-events: none;
 }
 
-.glow-rotate>* {
+.glow-rotate > * {
   position: relative;
   z-index: 2;
 }
 
 @keyframes glow-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
   to {
-    transform: rotate(360deg);
+    --glow-angle: 360deg;
   }
 }
