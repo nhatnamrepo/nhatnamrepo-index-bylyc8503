@@ -157,7 +157,7 @@ return (
     <Dialog as="div" className="fixed inset-0 z-[200]" onClose={closeSearchBox}>
   <div className="fixed inset-0" onClick={closeSearchBox} />
     <div className="fixed inset-0 overflow-y-auto pointer-events-none">
-      <div className="flex min-h-full items-start justify-center p-4 pt-12">
+      <div className="flex min-h-full items-center justify-center p-4">
       <div className="pointer-events-none w-full max-w-3xl">
       <Transition.Child
         as="div"

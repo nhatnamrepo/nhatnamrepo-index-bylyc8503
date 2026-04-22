@@ -337,7 +337,7 @@ const FileListing: FC<{ query?: ParsedUrlQuery }> = ({ query }) => {
         {layout.name === 'Grid' ? <FolderGridLayout {...folderProps} /> : <FolderListLayout {...folderProps} />}
 
         {!onlyOnePage && (
-          <div className="rounded-b bg-gray-900/50 backdrop-blur-lg dark:bg-gray-800/50 dark:text-gray-100">
+          <div className="rounded-b bg-gray-900/60 backdrop-blur-lg dark:bg-gray-800/50 dark:text-gray-100">
             <div className="border-b border-gray-200 p-3 text-center font-mono text-sm text-gray-400 dark:border-gray-700">
               {`- showing ${size} page(s) ` +
                 (isLoadingMore ? `of ... file(s) -` : `of ${folderChildren.length} file(s) -`)}
