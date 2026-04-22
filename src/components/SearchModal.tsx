@@ -169,7 +169,7 @@ return (
         leaveFrom="opacity-100 scale-100"
         leaveTo="opacity-0 scale-95"
       >
-        <div className="overflow-hidden rounded border border-gray-300/30 text-left shadow-xl backdrop-blur-lg">
+        <div className="overflow-hidden rounded-2xl border border-gray-300/30 text-left shadow-xl backdrop-blur-lg">
       <Dialog.Title
                 as="h3"
                 className="flex items-center space-x-4 border-b border-gray-400/30 bg-black/60 p-4 text-white"
