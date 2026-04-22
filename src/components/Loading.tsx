@@ -1,6 +1,6 @@
 const Loading: React.FC<{ loadingText: string }> = ({ loadingText }) => {
   return (
-    <div className="flex items-center justify-center space-x-1 rounded py-32 dark:text-white">
+    <div className="flex items-center justify-center space-x-1 rounded py-32 text-white">
       <LoadingIcon className="-ml-1 mr-3 h-5 w-5 animate-spin" />
       <div>{loadingText}</div>
     </div>

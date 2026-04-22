@@ -52,11 +52,11 @@ const AudioPreview: FC<{ file: OdFileObject }> = ({ file }) => {
     <>
       <PreviewContainer>
         <div className="flex flex-col space-y-4 md:flex-row md:space-x-4">
-          <div className="relative flex aspect-square w-full items-center justify-center rounded bg-gray-100 transition-all duration-75 dark:bg-gray-700 md:w-48">
+          <div className="relative flex aspect-square w-full items-center justify-center rounded bg-gray-800 transition-all duration-75 dark:bg-gray-700 md:w-48">
             <div
               className={`absolute z-20 flex h-full w-full items-center justify-center transition-all duration-300 ${
                 playerStatus === PlayerState.Loading
-                  ? 'bg-white opacity-80 dark:bg-gray-800'
+                  ? 'bg-gray-900 opacity-80 dark:bg-gray-800'
                   : 'bg-transparent opacity-0'
               }`}
             >
@@ -87,7 +87,7 @@ const AudioPreview: FC<{ file: OdFileObject }> = ({ file }) => {
           <div className="flex w-full flex-col justify-between">
             <div>
               <div className="mb-2 font-medium">{file.name}</div>
-              <div className="mb-4 text-sm text-gray-500">
+              <div className="mb-4 text-sm text-gray-300">
                 {'Last modified:' + ' ' + formatModifiedDateTime(file.lastModifiedDateTime)}
               </div>
             </div>

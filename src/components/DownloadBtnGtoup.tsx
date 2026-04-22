@@ -50,7 +50,7 @@ export const DownloadButton = ({
 }) => {
   return (
     <button
-      className={`flex items-center space-x-2 rounded-lg border bg-white px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100/10 focus:z-10 focus:ring-2 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-900 ${btnStyleMap(
+      className={`flex items-center space-x-2 rounded-lg border bg-gray-900/60 px-4 py-2 text-sm font-medium text-gray-200 hover:bg-gray-800/80 focus:z-10 focus:ring-2 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-900 ${btnStyleMap(
         btnColor
       )}`}
       title={btnTitle}

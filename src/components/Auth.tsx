@@ -19,9 +19,9 @@ const Auth: FC<{ redirect: string }> = ({ redirect }) => {
       <div className="mx-auto w-3/4 md:w-5/6">
         <Image src={'/images/fabulous-wapmire-weekdays.png'} alt="authenticate" width={912} height={912} priority />
       </div>
-      <div className="text-lg font-bold text-gray-900 dark:text-gray-100">{'Enter Password'}</div>
+      <div className="text-lg font-bold text-white dark:text-gray-100">{'Enter Password'}</div>
 
-      <p className="text-sm font-medium text-gray-500">
+      <p className="text-sm font-medium text-gray-300">
         {'This route (the folder itself and the files inside) is password protected. ' +
           'If you know the password, please enter it below.'}
       </p>
