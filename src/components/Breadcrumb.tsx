@@ -19,7 +19,7 @@ const Breadcrumb: React.FC<{ query?: ParsedUrlQuery }> = ({ query }) => {
       // We are rendering the path in reverse, so that the browser automatically scrolls to the end of the breadcrumb
       // https://stackoverflow.com/questions/18614301/keep-overflow-div-scrolled-to-bottom-unless-user-scrolls-up/18614561
       return (
-        <ol className="no-scrollbar inline-flex flex-row-reverse items-center gap-1 overflow-x-scroll text-sm text-gray-600 dark:text-gray-300 md:gap-3">
+        <ol className="no-scrollbar inline-flex flex-row-reverse items-center gap-1 overflow-x-scroll text-sm text-gray-200 dark:text-gray-300 md:gap-3">
           {path
             .slice(0)
             .reverse()
@@ -49,7 +49,7 @@ const Breadcrumb: React.FC<{ query?: ParsedUrlQuery }> = ({ query }) => {
   }
 
   return (
-    <div className="text-sm text-gray-600 transition-all duration-75 hover:opacity-80 dark:text-gray-300">
+    <div className="text-sm text-gray-200 transition-all duration-75 hover:opacity-80 dark:text-gray-300">
       <HomeCrumb />
     </div>
   )

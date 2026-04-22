@@ -69,7 +69,7 @@ const Navbar = () => {
 
         <div className="flex flex-1 items-center justify-center">
           <button
-            className="flex w-full max-w-sm items-center justify-between rounded-lg bg-gray-100 px-2.5 py-1.5 hover:opacity-80 dark:bg-gray-800 dark:text-white"
+            className="flex w-full max-w-sm items-center justify-between rounded-lg bg-white/20 px-2.5 py-1.5 text-white hover:opacity-80 backdrop-blur-sm dark:bg-gray-800"
             onClick={openSearchBox}
           >
             <div className="flex items-center space-x-2">
@@ -78,15 +78,15 @@ const Navbar = () => {
             </div>
 
             <div className="hidden items-center space-x-1 md:flex">
-              <div className="rounded-lg bg-gray-200 px-2 py-1 text-xs font-medium dark:bg-gray-700">
+              <div className="rounded-lg bg-white/20 px-2 py-1 text-xs font-medium text-white dark:bg-gray-700">
                 {os === 'mac' ? '⌘' : 'Ctrl'}
               </div>
-              <div className="rounded-lg bg-gray-200 px-2 py-1 text-xs font-medium dark:bg-gray-700">K</div>
+              <div className="rounded-lg bg-white/20 px-2 py-1 text-xs font-medium text-white dark:bg-gray-700">K</div>
             </div>
           </button>
         </div>
 
-        <div className="flex flex-1 items-center justify-end space-x-4 text-gray-700">
+        <div className="flex flex-1 items-center justify-end space-x-4 text-white">
           {siteConfig.links.length !== 0 &&
             siteConfig.links.map((l: { name: string; link: string }) => (
               <a
@@ -94,7 +94,7 @@ const Navbar = () => {
                 href={l.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 hover:opacity-80 dark:text-white"
+                className="flex items-center space-x-2 text-white hover:opacity-80"
               >
                 <FontAwesomeIcon icon={['fab', l.name.toLowerCase() as IconName]} />
                 <span className="hidden text-sm font-medium md:inline-block">{l.name}</span>
@@ -102,7 +102,7 @@ const Navbar = () => {
             ))}
 
           {siteConfig.email && (
-            <a href={siteConfig.email} className="flex items-center space-x-2 hover:opacity-80 dark:text-white">
+            <a href={siteConfig.email} className="flex items-center space-x-2 text-white hover:opacity-80">
               <FontAwesomeIcon icon={['far', 'envelope']} />
               <span className="hidden text-sm font-medium md:inline-block">{'Email'}</span>
             </a>
@@ -110,7 +110,7 @@ const Navbar = () => {
 
           {tokenPresent && (
             <button
-              className="flex items-center space-x-2 hover:opacity-80 dark:text-white"
+              className="flex items-center space-x-2 text-white hover:opacity-80"
               onClick={() => setIsOpen(true)}
             >
               <span className="hidden text-sm font-medium md:inline-block">{'Logout'}</span>

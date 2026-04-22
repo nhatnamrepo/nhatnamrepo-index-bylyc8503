@@ -343,7 +343,7 @@ const FileListing: FC<{ query?: ParsedUrlQuery }> = ({ query }) => {
                 (isLoadingMore ? `of ... file(s) -` : `of ${folderChildren.length} file(s) -`)}
             </div>
             <button
-              className={`flex w-full items-center justify-center space-x-2 p-3 disabled:cursor-not-allowed ${isLoadingMore || isReachingEnd ? 'opacity-60' : 'hover:bg-gray-100 dark:hover:bg-gray-850'
+              className={`flex w-full items-center justify-center space-x-2 p-3 disabled:cursor-not-allowed ${isLoadingMore || isReachingEnd ? 'opacity-60' : 'hover:bg-white/10 dark:hover:bg-gray-850'
                 }`}
               onClick={() => setSize(size + 1)}
               disabled={isLoadingMore || isReachingEnd}

@@ -33,7 +33,7 @@ const GridItem = ({ c, path }: { c: OdFolderChildren; path: string }) => {
         ) : (
           <div className="relative flex h-full w-full items-center justify-center rounded-lg">
             <ChildIcon child={c} />
-            <span className="absolute bottom-0 right-0 m-1 font-medium text-gray-700 dark:text-gray-500">
+            <span className="absolute bottom-0 right-0 m-1 font-medium text-gray-200 dark:text-gray-500">
               {c.folder?.childCount}
             </span>
           </div>
@@ -46,7 +46,7 @@ const GridItem = ({ c, path }: { c: OdFolderChildren; path: string }) => {
         </span>
         <ChildName name={c.name} folder={Boolean(c.folder)} />
       </div>
-      <div className="truncate text-center font-mono text-xs text-gray-700 dark:text-gray-500">
+      <div className="truncate text-center font-mono text-xs text-gray-200 dark:text-gray-500">
         {formatModifiedDateTime(c.lastModifiedDateTime)}
       </div>
     </div>
@@ -75,9 +75,9 @@ const FolderGridLayout = ({
 
   return (
     <div className="rounded bg-white/50 shadow-sm backdrop-blur-lg dark:bg-gray-800/50 dark:text-gray-100">
-      <div className="flex items-center border-b border-gray-900/10 px-3 text-xs font-bold uppercase tracking-widest text-gray-600 dark:border-gray-500/30 dark:text-gray-400">
+      <div className="flex items-center border-b border-gray-900/10 px-3 text-xs font-bold uppercase tracking-widest text-gray-200 dark:border-gray-500/30 dark:text-gray-400">
         <div className="flex-1">{`${folderChildren.length} item(s)`}</div>
-        <div className="flex p-1.5 text-gray-700 dark:text-gray-400">
+        <div className="flex p-1.5 text-gray-200 dark:text-gray-400">
           <Checkbox
             checked={totalSelected}
             onChange={toggleTotalSelected}
@@ -114,7 +114,7 @@ const FolderGridLayout = ({
         {folderChildren.map((c: OdFolderChildren) => (
           <div
             key={c.id}
-            className="group relative overflow-hidden rounded transition-all duration-100 hover:bg-gray-100 dark:hover:bg-gray-850"
+            className="group relative overflow-hidden rounded transition-all duration-100 hover:bg-white/10 dark:hover:bg-gray-850"
           >
             <div className="absolute right-0 top-0 z-10 m-1 rounded bg-white/50 py-0.5 opacity-0 transition-all duration-100 group-hover:opacity-100 dark:bg-gray-900/50">
               {c.folder ? (
