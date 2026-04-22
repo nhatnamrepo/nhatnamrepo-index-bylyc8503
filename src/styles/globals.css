@@ -9,14 +9,17 @@
 }
 
 @layer utilities {
+
   /* Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
 
   .no-scrollbar {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
   }
 }
 
@@ -33,9 +36,11 @@
 .markdown-body ul {
   list-style-type: disc;
 }
+
 .markdown-body ol {
   list-style-type: decimal;
 }
+
 pre[class*='language-'],
 code[class*='language-'] {
   font-family:
@@ -49,9 +54,9 @@ code[class*='language-'] {
 
 /* Very Blur*/
 
-body.blur-backdrop > #__next {
+body.blur-backdrop>#__next {
   filter: blur(8px);
-  transition: filter 0.4s ease;   
+  transition: filter 0.4s ease;
   backdrop-filter: brightness(0.7);
 
 }
@@ -74,30 +79,28 @@ body.blur-backdrop > #__next {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: conic-gradient(
-    from 0deg,
-    transparent 0deg,
-    transparent 60deg,
-    rgba(255, 255, 255, 0.5) 120deg,
-    transparent 180deg,
-    transparent 240deg,
-    rgba(255, 255, 255, 0.3) 300deg,
-    transparent 360deg
-  );
-  animation: glow-spin 3s linear infinite;
+  background: conic-gradient(from 0deg,
+      transparent 0deg,
+      transparent 60deg,
+      rgba(255, 255, 255, 0.5) 120deg,
+      transparent 180deg,
+      transparent 240deg,
+      rgba(255, 255, 255, 0.3) 300deg,
+      transparent 360deg);
+  animation: glow-spin 2s linear infinite;
   z-index: 0;
 }
 
 .glow-rotate::after {
   content: '';
   position: absolute;
-  inset: 1.5px;
+  inset: 2.5px;
   border-radius: inherit;
   background: inherit;
   z-index: 1;
 }
 
-.glow-rotate > * {
+.glow-rotate>* {
   position: relative;
   z-index: 2;
 }
@@ -106,6 +109,7 @@ body.blur-backdrop > #__next {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
