@@ -215,7 +215,7 @@ const VideoPreview: FC<{ file: OdFileObject }> = ({ file }) => {
             }}
             btnColor="orange"
             btnText={'Copy CDN link'}
-            btnIcon="bolt"
+            btnIcon="copy"
           />
           <DownloadButton
             onClickCallback={() => setMenuOpen(true)}
