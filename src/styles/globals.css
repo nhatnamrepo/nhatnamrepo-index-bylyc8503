@@ -1,6 +1,13 @@
 @import "tailwindcss";
 @config "../../tailwind.config.js";
 
+/* Force white text in light mode since the site uses a dark background image */
+@layer base {
+  body {
+    color: white;
+  }
+}
+
 @layer utilities {
   /* Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
