@@ -22,6 +22,8 @@ const btnStyleMap = (btnColor?: string) => {
     pink: 'hover:text-pink-600 focus:ring-pink-200 focus:text-pink-600 border-pink-300 dark:border-pink-700 dark:focus:ring-pink-500',
     yellow:
       'hover:text-yellow-400 focus:ring-yellow-100 focus:text-yellow-400 border-yellow-300 dark:border-yellow-400 dark:focus:ring-yellow-300',
+    orange:
+      'hover:text-orange-600 focus:ring-orange-200 focus:text-orange-600 border-orange-300 dark:border-orange-700 dark:focus:ring-orange-500',
   }
 
   if (btnColor) {
