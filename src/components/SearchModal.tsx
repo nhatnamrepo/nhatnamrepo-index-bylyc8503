@@ -176,7 +176,7 @@ export default function SearchModal({
                     <input
                       type="text"
                       id="search-box"
-                      className="w-full bg-transparent focus:outline-none focus-visible:outline-none"
+                      className="w-full bg-transparent text-center focus:outline-none focus-visible:outline-none"
                       placeholder={'Search ...'}
                       value={query}
                       onChange={e => setQuery(e.target.value)}
