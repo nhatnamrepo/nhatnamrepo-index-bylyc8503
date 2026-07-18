@@ -154,7 +154,7 @@ Yes! Completely free with no backend server what-so-ever.
 - [ ] Change another music player (yes i want loop)
 - [ ] JS-less
 - [ ] Fix SHA-256 and SHA-1
-- [ ] More blur
+- [x] More blur
 - [ ] Rewrite Wiki [(seem original repo has been cooked)](https://blog.lyc8503.net/post/github-account-suspended/)
 
 <div align="center">
